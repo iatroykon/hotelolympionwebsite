@@ -20,7 +20,7 @@
   --gold-dim: rgba(160, 140, 80, 0.1);
   --white: #ffffff;
   --silver: #a3a09b;
-  --muted: #646260;
+  --muted: #7d7b77; /* Increased contrast for readability */
   --border: rgba(160, 140, 80, 0.2);
   --shadow-g: 0 24px 64px rgba(160, 140, 80, 0.13);
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -580,7 +580,7 @@ ul {
   font-weight: 500;
 }
 .hst-src {
-  font-size: 0.58rem;
+  font-size: 0.62rem; /* Increased size for readability */
   color: var(--muted);
 }
 .hst-sep {
@@ -743,7 +743,7 @@ ul {
 .asc-num {
   display: block; /* Keep display block */
   font-family: "Lato", sans-serif; /* Change font family */
-  font-size: 2rem; /* Adjusted to be smaller */
+  font-size: 1.8rem; /* Adjusted to be smaller */
   font-weight: 600; /* Slightly thinner, but still prominent */
   color: var(--gold);
   line-height: 1;
@@ -753,7 +753,7 @@ ul {
   font-size: 1.2rem;
 }
 .asc-label {
-  font-size: 0.62rem;
+  font-size: 0.65rem; /* Increased size for readability */
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--silver);
@@ -1218,7 +1218,7 @@ ul {
 }
 .db-label {
   display: block;
-  font-size: 0.52rem;
+  font-size: 0.58rem; /* Increased size for readability */
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--bg-dark);

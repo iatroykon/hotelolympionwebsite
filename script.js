@@ -9,7 +9,10 @@ window.addEventListener("load", () => {
     const navbar = document.getElementById("navbar");
     navbar.style.opacity = "1";
     navbar.style.pointerEvents = "auto";
-  }, 1800);
+  }, 1800); // Keep this for the main loader transition
+
+  // Trigger hero stats animation to sync with its appearance
+  setTimeout(animateHeroStats, 1100); // Matches the animation-delay of .hero-strip
 });
 
 /* --- AOS --- */
@@ -65,38 +68,37 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-/* --- Stats counter animation --- */
-const statNums = document.querySelectorAll(".stat-num");
-let statsAnimated = false;
+/* --- Hero stats counter animation on load --- */
+function animateHeroStats() {
+  const heroStatNums = document.querySelectorAll(".hst-num");
+  if (!heroStatNums.length) return;
 
-function animateStats() {
-  if (statsAnimated) return;
-  const bar = document.querySelector(".stats-bar");
-  if (!bar) return;
-  if (bar.getBoundingClientRect().top < window.innerHeight) {
-    statsAnimated = true;
-    statNums.forEach((el) => {
-      const target = parseFloat(el.dataset.target);
-      const suffix = el.dataset.suffix || "";
-      const isDecimal = target % 1 !== 0;
-      const steps = 60;
-      const inc = target / steps;
-      let val = 0;
-      const timer = setInterval(() => {
-        val += inc;
-        if (val >= target) {
-          val = target;
-          clearInterval(timer);
-        }
-        el.textContent =
-          (isDecimal ? val.toFixed(1) : Math.floor(val)) + suffix;
-      }, 2500 / steps);
-    });
-  }
+  heroStatNums.forEach((el) => {
+    const target = parseFloat(el.dataset.target);
+    if (isNaN(target)) return;
+
+    const suffix = el.dataset.suffix || "";
+    const isDecimal = String(target).includes(".");
+    const duration = 2000; // 2 seconds as requested
+    const steps = 60; // Keep animation smooth
+    const increment = target / steps;
+    let currentValue = 0;
+
+    const timer = setInterval(() => {
+      currentValue += increment;
+      if (currentValue >= target) {
+        currentValue = target;
+        clearInterval(timer);
+      }
+
+      let displayValue = isDecimal
+        ? currentValue.toFixed(1)
+        : Math.floor(currentValue);
+
+      el.textContent = displayValue + suffix;
+    }, duration / steps);
+  });
 }
-
-window.addEventListener("scroll", animateStats, { passive: true });
-animateStats();
 
 /* --- Swiper testimonials --- */
 new Swiper(".testimonial-swiper", {
