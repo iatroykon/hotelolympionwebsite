@@ -1050,7 +1050,8 @@ ul {
   border-bottom: none;
 }
 .room-features li span {
-  font-size: 0.92rem;
+  font-size: 1.6rem;
+  color: var(--gold);
 }
 
 /* ==============================================
