@@ -15,14 +15,14 @@
   --bg-dark: #0c0b0a;
   --bg-mid: #141210;
   --bg-light: #1d1a17;
-  --gold: #a08c50; 
-  --gold-light: #b5a068; 
-  --gold-dim: rgba(160, 140, 80, 0.1); 
+  --gold: #a08c50;
+  --gold-light: #b5a068;
+  --gold-dim: rgba(160, 140, 80, 0.1);
   --white: #ffffff;
   --silver: #a3a09b;
   --muted: #646260;
-  --border: rgba(160, 140, 80, 0.2); 
-  --shadow-g: 0 24px 64px rgba(160, 140, 80, 0.13); 
+  --border: rgba(160, 140, 80, 0.2);
+  --shadow-g: 0 24px 64px rgba(160, 140, 80, 0.13);
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --t: 0.35s;
   --max-w: 1240px;
@@ -129,7 +129,7 @@ ul {
   }
 }
 
-/* ==============================================
+/* ============================================== 
    TYPOGRAPHY HELPERS
    ============================================== */
 .section-eyebrow {
@@ -145,18 +145,18 @@ ul {
   color: var(--gold-light);
 }
 .section-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--white);
   text-align: center;
   line-height: 1.15;
   margin-bottom: 18px;
 }
 .section-title-left {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--white);
   line-height: 1.2;
   margin-bottom: 20px;
@@ -183,7 +183,7 @@ ul {
   margin-right: auto;
 }
 
-/* ==============================================
+/* ============================================== 
    BUTTONS
    ============================================== */
 .btn {
@@ -215,7 +215,7 @@ ul {
   color: var(--bg-dark);
 }
 
-/* ==============================================
+/* ============================================== 
    NAVIGATION
    ============================================== */
 .navbar {
@@ -252,9 +252,9 @@ ul {
   flex-shrink: 0;
 }
 .logo-main {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem; /* Kept size */
+  font-weight: 500; /* Made thinner */
   color: var(--gold);
   letter-spacing: 1px;
 }
@@ -374,7 +374,7 @@ ul {
   font-weight: 700;
 }
 
-/* ==============================================
+/* ============================================== 
    HERO — Full-viewport cinematic
    ============================================== */
 .hero {
@@ -460,7 +460,7 @@ ul {
 
 /* Giant title */
 .hero-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: clamp(2.5rem, 5.5vw, 4.5rem);
   font-weight: 300;
   line-height: 0.92;
@@ -566,9 +566,9 @@ ul {
   background: rgba(201, 168, 76, 0.06);
 }
 .hst-num {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--gold);
   line-height: 1;
 }
@@ -641,7 +641,7 @@ ul {
   writing-mode: vertical-lr;
 }
 
-/* ==============================================
+/* ============================================== 
    ABOUT — 3-column magazine grid
    ============================================== */
 .about {
@@ -687,9 +687,9 @@ ul {
   padding-top: 8px;
 }
 .about-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.9rem);
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--white);
   line-height: 1.15;
   margin-bottom: 22px;
@@ -741,10 +741,10 @@ ul {
   border-color: var(--gold);
 }
 .asc-num {
-  display: block;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.5rem;
-  font-weight: 700;
+  display: block; /* Keep display block */
+  font-family: "Lato", sans-serif; /* Change font family */
+  font-size: 2rem; /* Adjusted to be smaller */
+  font-weight: 600; /* Slightly thinner, but still prominent */
   color: var(--gold);
   line-height: 1;
   margin-bottom: 7px;
@@ -773,7 +773,7 @@ ul {
   transform: scale(1.06);
 }
 
-/* ==============================================
+/* ============================================== 
    STATS BAR
    ============================================== */
 .stats-bar {
@@ -794,9 +794,9 @@ ul {
 }
 .stat-num {
   display: block;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600; /* Slightly thinner, but still prominent */
   color: var(--bg-dark);
   line-height: 1;
   margin-bottom: 5px;
@@ -815,7 +815,7 @@ ul {
   flex-shrink: 0;
 }
 
-/* ==============================================
+/* ============================================== 
    EXPERIENCES — Discover Thassos
    ============================================== */
 .experiences {
@@ -881,9 +881,9 @@ ul {
   display: block;
 }
 .exp-name {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--white);
   line-height: 1.15;
   margin-bottom: 0;
@@ -928,7 +928,7 @@ ul {
   transform: translateY(0);
 }
 
-/* ==============================================
+/* ============================================== 
    ROOMS
    ============================================== */
 .rooms {
@@ -1006,9 +1006,9 @@ ul {
   gap: 10px;
 }
 .room-name {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--white);
   line-height: 1.2;
 }
@@ -1020,10 +1020,10 @@ ul {
 }
 .room-price strong {
   display: block;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.5rem;
   color: var(--gold);
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
 }
 .room-desc {
   color: var(--silver);
@@ -1054,7 +1054,7 @@ ul {
   color: var(--gold);
 }
 
-/* ==============================================
+/* ============================================== 
    GALLERY
    ============================================== */
 .gallery {
@@ -1107,7 +1107,7 @@ ul {
   font-weight: 600;
 }
 
-/* ==============================================
+/* ============================================== 
    DINING — new section
    ============================================== */
 .dining {
@@ -1124,9 +1124,9 @@ ul {
   align-items: center;
 }
 .dining-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.3rem);
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 22px;
@@ -1153,9 +1153,9 @@ ul {
   border-bottom: none;
 }
 .ds-time {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--gold);
   min-width: 54px;
   flex-shrink: 0;
@@ -1227,13 +1227,13 @@ ul {
 }
 .db-title {
   display: block;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500; /* Made thinner */
   color: var(--bg-dark);
 }
 
-/* ==============================================
+/* ============================================== 
    AMENITIES
    ============================================== */
 .amenities {
@@ -1295,9 +1295,9 @@ ul {
   color: var(--gold);
 }
 .amenity h3 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--white);
   margin-bottom: 7px;
 }
@@ -1307,7 +1307,7 @@ ul {
   line-height: 1.65;
 }
 
-/* ==============================================
+/* ============================================== 
    AWARDS STRIP — new
    ============================================== */
 .awards-strip {
@@ -1332,9 +1332,9 @@ ul {
   justify-content: center;
 }
 .award-score {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600; /* Slightly thinner, but still prominent */
   color: var(--gold);
   line-height: 1;
   flex-shrink: 0;
@@ -1362,7 +1362,7 @@ ul {
   flex-shrink: 0;
 }
 
-/* ==============================================
+/* ============================================== 
    TESTIMONIALS
    ============================================== */
 .testimonials {
@@ -1385,10 +1385,10 @@ ul {
   position: absolute;
   top: 10px;
   left: 38px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 10rem;
   line-height: 1;
-  color: rgba(201, 168, 76, 0.06);
+  color: rgba(160, 140, 80, 0.06); /* Updated to new gold-dim */
   pointer-events: none;
 }
 .testi-stars {
@@ -1398,11 +1398,11 @@ ul {
   margin-bottom: 22px;
 }
 .testi-quote {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.28rem;
   color: var(--white);
   line-height: 1.78;
-  font-style: italic;
+  font-style: normal; /* Removed italic for a more standard look */
   margin-bottom: 32px;
 }
 .testi-author {
@@ -1418,13 +1418,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.1rem; /* Kept size */
+  font-weight: 600; /* Slightly thinner */
   color: var(--bg-dark);
   flex-shrink: 0;
 }
 .testi-name {
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   font-size: 0.88rem;
   margin-bottom: 2px;
 }
@@ -1434,9 +1434,9 @@ ul {
 }
 .testi-score {
   margin-left: auto;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 2.1rem;
-  font-weight: 700;
+  font-weight: 600; /* Slightly thinner, but still prominent */
   color: var(--gold);
 }
 .swiper-button-prev,
@@ -1467,7 +1467,7 @@ ul {
   background: var(--gold) !important;
 }
 
-/* ==============================================
+/* ============================================== 
    LOCATION
    ============================================== */
 .location {
@@ -1573,7 +1573,7 @@ ul {
   background: var(--gold-light);
 }
 
-/* ==============================================
+/* ============================================== 
    FOOTER
    ============================================== */
 .footer {
@@ -1589,9 +1589,9 @@ ul {
   gap: 50px;
 }
 .footer-logo {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
   color: var(--gold);
   margin-bottom: 12px;
 }
@@ -1614,7 +1614,7 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600; /* Slightly thinner */
   color: var(--muted);
   text-transform: uppercase;
   transition: all var(--t);
@@ -1636,7 +1636,7 @@ ul {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 700;
+  font-weight: 600; /* Slightly thinner */
   margin-bottom: 20px;
 }
 .footer-col ul {
@@ -1669,9 +1669,9 @@ ul {
   margin-bottom: 18px;
 }
 .rating-big {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
   font-size: 2.9rem;
-  font-weight: 700;
+  font-weight: 600; /* Slightly thinner, but still prominent */
   color: var(--gold);
   line-height: 1;
 }
@@ -1698,7 +1698,7 @@ ul {
 }
 .score-row span:last-child {
   color: var(--gold);
-  font-weight: 600;
+  font-weight: 500; /* Made thinner */
 }
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1708,7 +1708,7 @@ ul {
   color: var(--muted);
 }
 
-/* ==============================================
+/* ============================================== 
    BACK TO TOP
    ============================================== */
 .back-to-top {
@@ -1721,7 +1721,7 @@ ul {
   background: var(--gold);
   color: var(--bg-dark);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600; /* Slightly thinner */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1738,7 +1738,7 @@ ul {
   transform: translateY(-3px);
 }
 
-/* ==============================================
+/* ============================================== 
    RESPONSIVE — Tablet landscape (≤1100px)
    ============================================== */
 @media (max-width: 1100px) {
@@ -1783,7 +1783,7 @@ ul {
   }
 }
 
-/* ==============================================
+/* ============================================== 
    RESPONSIVE — Tablet portrait (≤900px)
    ============================================== */
 @media (max-width: 900px) {
@@ -1933,7 +1933,7 @@ ul {
   }
 }
 
-/* ==============================================
+/* ============================================== 
    RESPONSIVE — Mobile (≤768px)
    ============================================== */
 @media (max-width: 768px) {
@@ -2013,7 +2013,7 @@ ul {
     padding: 18px 12px;
   }
   .asc-num {
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* Adjusted for smaller screens */
   }
   .asc-label {
     font-size: 0.58rem;
@@ -2120,7 +2120,7 @@ ul {
   }
 }
 
-/* ==============================================
+/* ============================================== 
    RESPONSIVE — Small mobile (≤480px)
    ============================================== */
 @media (max-width: 480px) {
