@@ -1,8 +1,4 @@
-/* ==============================================
-   HOTEL OLYMPION — JAVASCRIPT
-   ============================================== */
-
-/* --- Loader --- */
+/* Loader */
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("loader").classList.add("hidden");
@@ -10,13 +6,12 @@ window.addEventListener("load", () => {
     const navbar = document.getElementById("navbar");
     navbar.style.opacity = "1";
     navbar.style.pointerEvents = "auto";
-  }, 1800); // Keep this for the main loader transition
+  }, 1800);
 
-  // Trigger hero stats animation to sync with its appearance
-  setTimeout(animateHeroStats, 1100); // Matches the animation-delay of .hero-strip
+  setTimeout(animateHeroStats, 1100);
 });
 
-/* --- AOS --- */
+/* AOS */
 AOS.init({
   duration: 750,
   easing: "ease-out-quad",
@@ -24,7 +19,7 @@ AOS.init({
   offset: 70,
 });
 
-/* --- Navbar scroll + back-to-top --- */
+/* Navbar scroll + back-to-top */
 const navbar = document.getElementById("navbar");
 const backToTop = document.getElementById("backToTop");
 
@@ -42,7 +37,7 @@ backToTop.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" }),
 );
 
-/* --- Hamburger / mobile menu --- */
+/* Hamburger / mobile menu */
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -58,7 +53,7 @@ document.querySelectorAll(".mobile-link").forEach((link) => {
   });
 });
 
-/* --- Smooth scroll for all anchor links --- */
+/* Smooth scroll for all anchor links */
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     const target = document.querySelector(link.getAttribute("href"));
@@ -69,7 +64,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-/* --- Hero stats counter animation on load --- */
+/* Hero stats counter animation on load */
 function animateHeroStats() {
   const heroStatNums = document.querySelectorAll(".hst-num");
   if (!heroStatNums.length) return;
@@ -80,8 +75,8 @@ function animateHeroStats() {
 
     const suffix = el.dataset.suffix || "";
     const isDecimal = String(target).includes(".");
-    const duration = 2000; // 2 seconds as requested
-    const steps = 60; // Keep animation smooth
+    const duration = 2000;
+    const steps = 60;
     const increment = target / steps;
     let currentValue = 0;
 
@@ -101,7 +96,7 @@ function animateHeroStats() {
   });
 }
 
-/* --- Swiper testimonials --- */
+/* Swiper testimonials */
 new Swiper(".testimonial-swiper", {
   loop: true,
   speed: 700,
@@ -111,7 +106,7 @@ new Swiper(".testimonial-swiper", {
   grabCursor: true,
 });
 
-/* --- Room buttons → pre-select room & scroll to booking --- */
+/* Room buttons → pre-select room & scroll to booking */
 document.querySelectorAll(".room-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const name = btn
@@ -131,7 +126,7 @@ document.querySelectorAll(".room-btn").forEach((btn) => {
   });
 });
 
-/* --- Booking form date logic --- */
+/* Booking form date logic */
 const checkinEl = document.getElementById("checkin");
 const checkoutEl = document.getElementById("checkout");
 const fmt = (d) => d.toISOString().split("T")[0];
@@ -171,7 +166,7 @@ document.getElementById("bookingBtn")?.addEventListener("click", () => {
   showToast("Checking availability — we'll be in touch shortly!");
 });
 
-/* --- Active nav highlight on scroll --- */
+/* Active nav highlight on scroll */
 const sections = document.querySelectorAll("section[id]");
 const navLinksAll = document.querySelectorAll(".nav-link");
 
@@ -192,7 +187,7 @@ const secObserver = new IntersectionObserver(
 
 sections.forEach((s) => secObserver.observe(s));
 
-/* --- Toast notification --- */
+/* Toast notification */
 function showToast(message) {
   document.querySelector(".toast")?.remove();
   const toast = document.createElement("div");
@@ -230,7 +225,7 @@ function showToast(message) {
   }, 3500);
 }
 
-/* --- Console branding --- */
+/* Console branding */
 console.log(
   "%c Hotel Olympion %c Potos · Thassos · Greece ",
   "background:#c9a84c;color:#0d0d0d;font-weight:700;font-size:13px;padding:5px 12px;",

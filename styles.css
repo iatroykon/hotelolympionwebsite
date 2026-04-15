@@ -1,8 +1,4 @@
-/* ==============================================
-   HOTEL OLYMPION — ELITE REDESIGN v3
-   ============================================== */
-
-/* ── Reset & Root ── */
+/* Reset & Root */
 *,
 *::before,
 *::after {
@@ -20,7 +16,7 @@
   --gold-dim: rgba(160, 140, 80, 0.1);
   --white: #ffffff;
   --silver: #a3a09b;
-  --muted: #7d7b77; /* Increased contrast for readability */
+  --muted: #7d7b77;
   --border: rgba(160, 140, 80, 0.2);
   --shadow-g: 0 24px 64px rgba(160, 140, 80, 0.13);
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -70,9 +66,7 @@ ul {
   border-radius: 2px;
 }
 
-/* ============================================== 
-   TYPOGRAPHY HELPERS
-   ============================================== */
+/* TYPOGRAPHY HELPERS */
 .section-eyebrow {
   display: block;
   font-size: 0.68rem;
@@ -88,7 +82,7 @@ ul {
 .section-title {
   font-family: "Lato", sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--white);
   text-align: center;
   line-height: 1.15;
@@ -97,7 +91,7 @@ ul {
 .section-title-left {
   font-family: "Lato", sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--white);
   line-height: 1.2;
   margin-bottom: 20px;
@@ -124,9 +118,7 @@ ul {
   margin-right: auto;
 }
 
-/* ============================================== 
-   BUTTONS
-   ============================================== */
+/* BUTTONS */
 .btn {
   display: inline-block;
   padding: 10px 26px;
@@ -144,7 +136,7 @@ ul {
 .btn-primary:hover {
   background: var(--gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 12px 36px rgba(160, 140, 80, 0.45); /* Updated shadow color */
+  box-shadow: 0 12px 36px rgba(160, 140, 80, 0.45);
 }
 .btn-outline {
   background: transparent;
@@ -156,9 +148,7 @@ ul {
   color: var(--bg-dark);
 }
 
-/* ============================================== 
-   NAVIGATION
-   ============================================== */
+/* NAVIGATION */
 .navbar {
   position: fixed;
   top: 0;
@@ -194,8 +184,8 @@ ul {
 }
 .logo-main {
   font-family: "Lato", sans-serif;
-  font-size: 1.3rem; /* Kept size */
-  font-weight: 500; /* Made thinner */
+  font-size: 1.3rem;
+  font-weight: 500;
   color: var(--gold);
   letter-spacing: 1px;
 }
@@ -315,9 +305,7 @@ ul {
   font-weight: 700;
 }
 
-/* ============================================== 
-   HERO — Full-viewport cinematic
-   ============================================== */
+/* HERO — Full-viewport cinematic */
 .hero {
   position: relative;
   height: 100vh;
@@ -459,7 +447,7 @@ ul {
 .hcta-primary:hover {
   background: var(--gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 14px 42px rgba(160, 140, 80, 0.5); /* Updated shadow color */
+  box-shadow: 0 14px 42px rgba(160, 140, 80, 0.5);
 }
 .hcta-ghost {
   display: inline-block;
@@ -507,9 +495,9 @@ ul {
   background: rgba(201, 168, 76, 0.06);
 }
 .hst-num {
-  font-family: "Lato", sans-serif;
-  font-size: 1.35rem;
-  font-weight: 500; /* Made thinner */
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: var(--gold);
   line-height: 1;
 }
@@ -521,7 +509,7 @@ ul {
   font-weight: 500;
 }
 .hst-src {
-  font-size: 0.62rem; /* Increased size for readability */
+  font-size: 0.62rem;
   color: var(--muted);
 }
 .hst-sep {
@@ -582,9 +570,7 @@ ul {
   writing-mode: vertical-lr;
 }
 
-/* ============================================== 
-   ABOUT — 3-column magazine grid
-   ============================================== */
+/* ABOUT — 3-column magazine grid */
 .about {
   padding: 100px 40px;
   background: var(--bg-mid);
@@ -630,7 +616,7 @@ ul {
 .about-title {
   font-family: "Lato", sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.9rem);
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--white);
   line-height: 1.15;
   margin-bottom: 22px;
@@ -682,10 +668,10 @@ ul {
   border-color: var(--gold);
 }
 .asc-num {
-  display: block; /* Keep display block */
-  font-family: "Lato", sans-serif; /* Change font family */
-  font-size: 1.8rem; /* Adjusted to be smaller */
-  font-weight: 600; /* Slightly thinner, but still prominent */
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--gold);
   line-height: 1;
   margin-bottom: 7px;
@@ -694,71 +680,13 @@ ul {
   font-size: 1.2rem;
 }
 .asc-label {
-  font-size: 0.65rem; /* Increased size for readability */
+  font-size: 0.65rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--silver);
 }
-.about-side-img {
-  overflow: hidden;
-  flex: 1;
-  min-height: 140px;
-}
-.about-side-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 8s ease;
-}
-.about-side-img:hover img {
-  transform: scale(1.06);
-}
 
-/* ============================================== 
-   STATS BAR
-   ============================================== */
-.stats-bar {
-  background: var(--gold);
-  padding: 28px 40px;
-}
-.stats-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.stat-item {
-  text-align: center;
-  padding: 0 52px;
-  flex: 1;
-}
-.stat-num {
-  display: block;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.7rem;
-  font-weight: 400;
-  color: var(--bg-dark);
-  line-height: 1;
-  margin-bottom: 5px;
-}
-.stat-lbl {
-  font-size: 0.64rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(13, 13, 13, 0.6);
-}
-.stat-divider {
-  width: 1px;
-  height: 36px;
-  background: rgba(13, 13, 13, 0.16);
-  flex-shrink: 0;
-}
-
-/* ============================================== 
-   EXPERIENCES — Discover Thassos
-   ============================================== */
+/* EXPERIENCES — Discover Thassos */
 .experiences {
   padding: 100px 40px;
   background: var(--bg-dark);
@@ -824,7 +752,7 @@ ul {
 .exp-name {
   font-family: "Lato", sans-serif;
   font-size: 2rem;
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--white);
   line-height: 1.15;
   margin-bottom: 0;
@@ -869,9 +797,7 @@ ul {
   transform: translateY(0);
 }
 
-/* ============================================== 
-   ROOMS
-   ============================================== */
+/* ROOMS */
 .rooms {
   padding: 100px 40px;
   max-width: var(--max-w);
@@ -897,9 +823,6 @@ ul {
   transform: translateY(-8px);
   box-shadow: var(--shadow-g);
   border-color: rgba(201, 168, 76, 0.45);
-}
-.room-card.featured {
-  border-color: var(--gold);
 }
 .room-img-wrap {
   position: relative;
@@ -929,10 +852,6 @@ ul {
   text-transform: uppercase;
   padding: 5px 12px;
 }
-.room-tag.gold {
-  background: var(--gold);
-  color: var(--bg-dark);
-}
 .room-body {
   padding: 20px;
   display: flex;
@@ -949,9 +868,12 @@ ul {
 .room-name {
   font-family: "Lato", sans-serif;
   font-size: 1.4rem;
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--white);
   line-height: 1.2;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .room-price {
   font-size: 0.7rem;
@@ -966,7 +888,7 @@ ul {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
   color: var(--gold);
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
 }
 .room-desc {
   color: var(--silver);
@@ -977,7 +899,7 @@ ul {
 .room-features {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
   flex: 1;
 }
 .room-features li {
@@ -986,7 +908,7 @@ ul {
   gap: 10px;
   font-size: 0.79rem;
   color: var(--silver);
-  padding: 4px 0;
+  padding: 2px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .room-features li:last-child {
@@ -997,9 +919,7 @@ ul {
   color: var(--gold);
 }
 
-/* ============================================== 
-   GALLERY
-   ============================================== */
+/* GALLERY */
 .gallery {
   padding: 100px 40px;
   background: var(--bg-mid);
@@ -1050,9 +970,7 @@ ul {
   font-weight: 600;
 }
 
-/* ============================================== 
-   DINING — new section
-   ============================================== */
+/* DINING — new section */
 .dining {
   padding: 100px 40px 150px;
   background: var(--bg-dark);
@@ -1069,7 +987,7 @@ ul {
 .dining-title {
   font-family: "Lato", sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.3rem);
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 22px;
@@ -1081,7 +999,7 @@ ul {
   margin-bottom: 18px;
 }
 .dining-schedule {
-  margin: 30px 0 40px;
+  margin: 30px 0 5px;
   display: flex;
   flex-direction: column;
 }
@@ -1101,7 +1019,7 @@ ul {
 .ds-time {
   font-family: "Lato", sans-serif;
   font-size: 1.1rem;
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--gold);
   min-width: 54px;
   flex-shrink: 0;
@@ -1153,35 +1071,8 @@ ul {
   height: 100%;
   object-fit: cover;
 }
-.dining-badge {
-  position: absolute;
-  top: 28px;
-  right: -14px;
-  background: var(--gold);
-  padding: 18px 22px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-.db-label {
-  display: block;
-  font-size: 0.58rem; /* Increased size for readability */
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--bg-dark);
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-.db-title {
-  display: block;
-  font-family: "Lato", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500; /* Made thinner */
-  color: var(--bg-dark);
-}
 
-/* ============================================== 
-   AMENITIES
-   ============================================== */
+/* AMENITIES */
 .amenities {
   padding: 100px 40px;
   background: var(--bg-mid);
@@ -1243,7 +1134,7 @@ ul {
 .amenity h3 {
   font-family: "Lato", sans-serif;
   font-size: 0.95rem;
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--white);
   margin-bottom: 7px;
 }
@@ -1253,64 +1144,7 @@ ul {
   line-height: 1.65;
 }
 
-/* ============================================== 
-   AWARDS STRIP — new
-   ============================================== */
-.awards-strip {
-  background: #060606;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 30px 40px;
-}
-.awards-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.award-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 0 44px;
-  flex: 1;
-  justify-content: center;
-}
-.award-score {
-  font-family: "Lato", sans-serif;
-  font-size: 2rem;
-  font-weight: 600; /* Slightly thinner, but still prominent */
-  color: var(--gold);
-  line-height: 1;
-  flex-shrink: 0;
-}
-.award-info {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.award-word {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--white);
-}
-.award-platform {
-  font-size: 0.6rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.award-sep {
-  width: 1px;
-  height: 38px;
-  background: var(--border);
-  flex-shrink: 0;
-}
-
-/* ============================================== 
-   TESTIMONIALS
-   ============================================== */
+/* TESTIMONIALS */
 .testimonials {
   padding: 100px 40px;
   background: var(--bg-dark);
@@ -1320,11 +1154,17 @@ ul {
   margin: 0 auto;
   padding-bottom: 60px !important;
 }
+.testimonial-swiper .swiper-wrapper {
+  align-items: stretch;
+}
 .testi-card {
   background: var(--bg-mid);
   border: 1px solid var(--border);
   padding: 52px;
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .testi-card::before {
   content: "\201C";
@@ -1334,7 +1174,7 @@ ul {
   font-family: "Lato", sans-serif;
   font-size: 10rem;
   line-height: 1;
-  color: rgba(160, 140, 80, 0.06); /* Updated to new gold-dim */
+  color: rgba(160, 140, 80, 0.06);
   pointer-events: none;
 }
 .testi-stars {
@@ -1348,8 +1188,9 @@ ul {
   font-size: 1.05rem;
   color: var(--white);
   line-height: 1.78;
-  font-style: normal; /* Removed italic for a more standard look */
+  font-style: normal;
   margin-bottom: 32px;
+  flex-grow: 1;
 }
 .testi-author {
   display: flex;
@@ -1364,13 +1205,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem; /* Kept size */
-  font-weight: 600; /* Slightly thinner */
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--bg-dark);
   flex-shrink: 0;
 }
 .testi-name {
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   font-size: 0.88rem;
   margin-bottom: 2px;
 }
@@ -1413,9 +1254,7 @@ ul {
   background: var(--gold) !important;
 }
 
-/* ============================================== 
-   LOCATION
-   ============================================== */
+/* LOCATION */
 .location {
   background: var(--bg-dark);
 }
@@ -1519,9 +1358,7 @@ ul {
   background: var(--gold-light);
 }
 
-/* ============================================== 
-   FOOTER
-   ============================================== */
+/* FOOTER */
 .footer {
   background: #060606;
   border-top: 1px solid var(--border);
@@ -1531,13 +1368,13 @@ ul {
   margin: 0 auto;
   padding: 68px 40px 46px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 50px;
 }
 .footer-logo {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   color: var(--gold);
   margin-bottom: 12px;
 }
@@ -1560,7 +1397,7 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
-  font-weight: 600; /* Slightly thinner */
+  font-weight: 600;
   color: var(--muted);
   text-transform: uppercase;
   transition: all var(--t);
@@ -1582,7 +1419,7 @@ ul {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 600; /* Slightly thinner */
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .footer-col ul {
@@ -1608,44 +1445,6 @@ ul {
   text-align: center;
   margin-right: 6px;
 }
-.footer-rating {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-.rating-big {
-  font-family: "Lato", sans-serif;
-  font-size: 2.9rem;
-  font-weight: 600; /* Slightly thinner, but still prominent */
-  color: var(--gold);
-  line-height: 1;
-}
-.rating-label {
-  font-size: 0.8rem;
-  color: var(--silver);
-  line-height: 1.6;
-}
-.rating-label span {
-  font-size: 0.68rem;
-  color: var(--muted);
-}
-.footer-scores {
-  display: flex;
-  flex-direction: column;
-}
-.score-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.78rem;
-  color: var(--muted);
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.score-row span:last-child {
-  color: var(--gold);
-  font-weight: 500; /* Made thinner */
-}
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: 18px 40px;
@@ -1654,9 +1453,7 @@ ul {
   color: var(--muted);
 }
 
-/* ============================================== 
-   BACK TO TOP
-   ============================================== */
+/* BACK TO TOP */
 .back-to-top {
   position: fixed;
   bottom: 28px;
@@ -1667,7 +1464,7 @@ ul {
   background: var(--gold);
   color: var(--bg-dark);
   font-size: 1rem;
-  font-weight: 600; /* Slightly thinner */
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1684,9 +1481,7 @@ ul {
   transform: translateY(-3px);
 }
 
-/* ============================================== 
-   RESPONSIVE — Tablet landscape (≤1100px)
-   ============================================== */
+/* RESPONSIVE — Tablet landscape (≤1100px) */
 @media (max-width: 1100px) {
   .nav-inner {
     padding: 0 24px;
@@ -1719,22 +1514,9 @@ ul {
   .dining-inner {
     gap: 52px;
   }
-  .awards-inner {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .award-item {
-    flex: 0 0 40%;
-    padding: 16px 20px;
-  }
-  .award-sep:nth-child(4) {
-    display: none;
-  }
 }
 
-/* ============================================== 
-   RESPONSIVE — Tablet portrait (≤900px)
-   ============================================== */
+/* RESPONSIVE — Tablet portrait (≤900px) */
 @media (max-width: 900px) {
   .hero-title {
     font-size: clamp(2.2rem, 7vw, 3.8rem);
@@ -1767,10 +1549,6 @@ ul {
     grid-column: span 2;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
-  }
-  .about-side-img {
-    grid-column: span 4;
-    min-height: 120px;
   }
 
   .experiences {
@@ -1805,7 +1583,7 @@ ul {
   }
   .rooms-grid {
     grid-template-columns: 1fr;
-    max-width: 480px;
+    max-width: 440px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1834,10 +1612,6 @@ ul {
   .dining-img-sm {
     display: none;
   }
-  .dining-badge {
-    top: 20px;
-    right: 20px;
-  }
 
   .amenities {
     padding: 70px 24px;
@@ -1846,21 +1620,8 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .awards-inner {
-    gap: 0;
-  }
-  .award-item {
-    flex: 0 0 48%;
-  }
-
   .testimonials {
     padding: 70px 24px;
-  }
-  .booking {
-    padding: 70px 24px;
-  }
-  .booking-form {
-    grid-template-columns: 1fr 1fr;
   }
 
   .loc-info-inner {
@@ -1873,18 +1634,9 @@ ul {
   .loc-info-band {
     padding: 52px 24px;
   }
-
-  .stats-bar {
-    padding: 22px 16px;
-  }
-  .stat-item {
-    padding: 0 20px;
-  }
 }
 
-/* ============================================== 
-   RESPONSIVE — Mobile (≤768px)
-   ============================================== */
+/* RESPONSIVE — Mobile (≤768px) */
 @media (max-width: 768px) {
   .nav-links,
   .nav-cta {
@@ -1959,48 +1711,30 @@ ul {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
-  .about-side-img {
-    grid-column: span 2;
-  }
   .about-stat-card {
     padding: 18px 12px;
   }
   .asc-num {
-    font-size: 1.6rem; /* Adjusted for smaller screens */
+    font-size: 1.6rem;
   }
   .asc-label {
     font-size: 0.58rem;
   }
 
-  /* Stats bar */
-  .stat-num {
-    font-size: 1.8rem;
-  }
-  .stat-item {
-    padding: 0 14px;
-  }
-
   .room-img-wrap {
-    height: 185px;
+    height: 160px;
   }
   .room-body {
-    padding: 18px 20px;
-  }
-
-  .room-img-wrap {
-    height: 160px; /* Made smaller */
-  }
-  .room-body {
-    padding: 14px 16px; /* Reduced padding */
+    padding: 14px 16px;
   }
   .room-name {
-    font-size: 1.2rem; /* Made smaller */
+    font-size: 1.2rem;
   }
   .room-price strong {
-    font-size: 1.3rem; /* Made smaller */
+    font-size: 1.3rem;
   }
   .room-features li {
-    font-size: 0.7rem; /* Made smaller */
+    font-size: 0.7rem;
   }
 
   .exp-card {
@@ -2021,7 +1755,6 @@ ul {
   }
 
   .dining-inner {
-    /* Adjusted margin-top for mobile */
     gap: 0;
   }
   .dining-visual {
@@ -2029,25 +1762,6 @@ ul {
   }
   .dining-img-main {
     height: 260px;
-  }
-
-  .awards-inner {
-    flex-wrap: wrap;
-    gap: 0;
-  }
-  .award-item {
-    flex: 0 0 100%;
-    padding: 14px 20px;
-    justify-content: flex-start;
-  }
-  .award-sep {
-    width: 100%;
-    height: 1px;
-    margin: 0;
-  }
-
-  .booking-form {
-    grid-template-columns: 1fr;
   }
 
   .loc-cards {
@@ -2110,9 +1824,7 @@ ul {
   }
 }
 
-/* ============================================== 
-   RESPONSIVE — Small mobile (≤480px)
-   ============================================== */
+/* RESPONSIVE — Small mobile (≤480px) */
 @media (max-width: 480px) {
   .nav-inner {
     height: 60px;
@@ -2151,16 +1863,12 @@ ul {
     letter-spacing: 1px;
   }
 
-  /* About stat cards */
   .about {
     padding: 52px 16px;
   }
   .about-col-side {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-  }
-  .about-side-img {
-    grid-column: span 2;
   }
   .about-stat-card {
     padding: 14px 10px;
@@ -2188,7 +1896,7 @@ ul {
     padding: 52px 16px;
   }
   .dining {
-    padding: 52px 16px;
+    padding: 52px 16px 65px;
   }
   .amenities {
     padding: 52px 16px;
@@ -2196,12 +1904,8 @@ ul {
   .testimonials {
     padding: 52px 16px;
   }
-  .booking {
-    padding: 52px 16px;
-  }
 
   .section-header {
-    /* Adjusted section header margin */
     margin-bottom: 24px;
   }
   .section-title {
@@ -2210,38 +1914,6 @@ ul {
   .section-eyebrow {
     font-size: 0.57rem;
     letter-spacing: 2px;
-  }
-
-  /* Gold stats bar — 2×2 */
-  .stats-bar {
-    padding: 18px 14px;
-  }
-  .stats-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
-  .stat-item {
-    flex: unset;
-    padding: 12px 8px;
-    border-bottom: 1px solid rgba(13, 13, 13, 0.12);
-  }
-  .stat-item:nth-child(odd) {
-    border-right: 1px solid rgba(13, 13, 13, 0.12);
-  }
-  .stat-item:nth-child(3),
-  .stat-item:nth-child(4) {
-    border-bottom: none;
-  }
-  .stat-divider {
-    display: none;
-  }
-  .stat-num {
-    font-size: 1.6rem;
-  }
-  .stat-lbl {
-    font-size: 0.58rem;
-    letter-spacing: 1.5px;
   }
 
   .exp-card {
