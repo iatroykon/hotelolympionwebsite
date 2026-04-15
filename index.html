@@ -173,9 +173,52 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      /* Critical CSS for loader to prevent FOUC */
+      body.loading {
+        overflow: hidden;
+      }
+      .loader {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: #0c0b0a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+      }
+      .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .loader-emblem {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: #ffffff;
+        letter-spacing: 10px;
+        text-align: center;
+      }
+      .loader-emblem span { color: #a08c50; }
+      .loader-tagline { font-family: "Lato", sans-serif; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: #a3a09b; margin-top: 12px; margin-bottom: 32px; }
+      .loader-bar { width: 180px; height: 2px; background: rgba(255, 255, 255, 0.1); overflow: hidden; }
+      .loader-progress { height: 100%; background: #a08c50; animation: loadProg 1.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+      @keyframes loadProg {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      @media (max-width: 480px) {
+        .loader-emblem { font-size: 1.5rem; letter-spacing: 7px; }
+        .loader-tagline { font-size: 0.64rem; letter-spacing: 3px; margin-top: 8px; margin-bottom: 20px; }
+        .loader-bar { width: 130px; }
+      }
+    </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="loading">
     <!-- ── LOADER ── -->
     <div class="loader" id="loader" style="z-index: 99999">
       <div class="loader-emblem">H<span>O</span></div>
@@ -390,7 +433,7 @@
             <div class="room-header-row">
               <h3 class="room-name">Standard Double</h3>
               <div class="room-price">
-                From <strong>€75</strong><span>/night</span>
+                <strong>€75</strong><span>/night</span>
               </div>
             </div>
             <p class="room-desc">
@@ -421,7 +464,7 @@
             <div class="room-header-row">
               <h3 class="room-name">Superior Triple</h3>
               <div class="room-price">
-                From <strong>€110</strong><span>/night</span>
+                <strong>€110</strong><span>/night</span>
               </div>
             </div>
             <p class="room-desc">
@@ -452,7 +495,7 @@
             <div class="room-header-row">
               <h3 class="room-name">Family Suite</h3>
               <div class="room-price">
-                From <strong>€145</strong><span>/night</span>
+                <strong>€145</strong><span>/night</span>
               </div>
             </div>
             <p class="room-desc">

@@ -31,14 +31,15 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 body {
   font-family: "Lato", sans-serif;
   background: var(--bg-dark);
   color: var(--white);
   line-height: 1.7;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img {
   display: block;
@@ -67,66 +68,6 @@ ul {
 ::-webkit-scrollbar-thumb {
   background: var(--gold);
   border-radius: 2px;
-}
-
-/* ==============================================
-   LOADER
-   ============================================== */
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: var(--bg-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  transition:
-    opacity 0.8s ease,
-    visibility 0.8s ease;
-}
-.loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.loader-emblem {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 4rem;
-  font-weight: 300;
-  color: var(--white);
-  letter-spacing: 10px;
-}
-.loader-emblem span {
-  color: var(--gold);
-}
-.loader-tagline {
-  font-size: 0.75rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--silver);
-  margin-top: 12px;
-  margin-bottom: 32px;
-}
-.loader-bar {
-  width: 180px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-}
-.loader-progress {
-  height: 100%;
-  background: var(--gold);
-  animation: loadProg 1.7s var(--ease) forwards;
-}
-@keyframes loadProg {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
 }
 
 /* ============================================== 
@@ -188,8 +129,8 @@ ul {
    ============================================== */
 .btn {
   display: inline-block;
-  padding: 14px 38px;
-  font-size: 0.72rem;
+  padding: 10px 26px;
+  font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
@@ -263,7 +204,7 @@ ul {
   letter-spacing: 3px;
   color: var(--silver);
   text-transform: uppercase;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 .nav-links {
   display: flex;
@@ -556,7 +497,7 @@ ul {
 .hst-item {
   flex: 1;
   text-align: center;
-  padding: 22px 20px;
+  padding: 14px 20px;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -567,7 +508,7 @@ ul {
 }
 .hst-num {
   font-family: "Lato", sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.35rem;
   font-weight: 500; /* Made thinner */
   color: var(--gold);
   line-height: 1;
@@ -794,9 +735,9 @@ ul {
 }
 .stat-num {
   display: block;
-  font-family: "Lato", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600; /* Slightly thinner, but still prominent */
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.7rem;
+  font-weight: 400;
   color: var(--bg-dark);
   line-height: 1;
   margin-bottom: 5px;
@@ -962,7 +903,7 @@ ul {
 }
 .room-img-wrap {
   position: relative;
-  height: 230px;
+  height: 185px;
   overflow: hidden;
 }
 .room-img {
@@ -993,7 +934,7 @@ ul {
   color: var(--bg-dark);
 }
 .room-body {
-  padding: 28px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -1015,11 +956,13 @@ ul {
 .room-price {
   font-size: 0.7rem;
   color: var(--silver);
-  text-align: right;
   flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 4px;
 }
 .room-price strong {
-  display: block;
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
   color: var(--gold);
@@ -1111,7 +1054,7 @@ ul {
    DINING — new section
    ============================================== */
 .dining {
-  padding: 100px 40px;
+  padding: 100px 40px 150px;
   background: var(--bg-dark);
   border-bottom: 1px solid var(--border);
 }
@@ -1121,7 +1064,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: flex-start;
 }
 .dining-title {
   font-family: "Lato", sans-serif;
@@ -1150,6 +1093,9 @@ ul {
   border-bottom: 1px solid var(--border);
 }
 .dining-schedule li:last-child {
+  border-bottom: none;
+}
+.dining-schedule li:first-child {
   border-bottom: none;
 }
 .ds-time {
@@ -1399,7 +1345,7 @@ ul {
 }
 .testi-quote {
   font-family: "Lato", sans-serif;
-  font-size: 1.28rem;
+  font-size: 1.05rem;
   color: var(--white);
   line-height: 1.78;
   font-style: normal; /* Removed italic for a more standard look */
@@ -1434,9 +1380,9 @@ ul {
 }
 .testi-score {
   margin-left: auto;
-  font-family: "Lato", sans-serif;
-  font-size: 2.1rem;
-  font-weight: 600; /* Slightly thinner, but still prominent */
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 400;
   color: var(--gold);
 }
 .swiper-button-prev,
@@ -1754,11 +1700,14 @@ ul {
     grid-template-columns: 1fr 1fr;
   }
   .exp-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .exp-card {
+    height: 400px;
   }
   .exp-card:nth-child(3) {
-    grid-column: span 2;
-    height: 360px;
+    grid-column: auto;
+    height: 400px;
   }
   .loc-cards {
     grid-template-columns: repeat(3, 1fr);
@@ -1880,7 +1829,7 @@ ul {
     gap: 0;
   }
   .dining-visual {
-    margin-top: 64px;
+    margin-top: 28px;
   }
   .dining-img-sm {
     display: none;
@@ -1964,8 +1913,9 @@ ul {
   }
   .hcta-primary,
   .hcta-ghost {
-    width: 100%;
-    max-width: 260px;
+    width: auto;
+    min-width: 150px;
+    max-width: 210px;
     text-align: center;
   }
 
@@ -1994,6 +1944,9 @@ ul {
   }
 
   /* About stats */
+  .about {
+    padding-top: 96px;
+  }
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -2027,6 +1980,29 @@ ul {
     padding: 0 14px;
   }
 
+  .room-img-wrap {
+    height: 185px;
+  }
+  .room-body {
+    padding: 18px 20px;
+  }
+
+  .room-img-wrap {
+    height: 160px; /* Made smaller */
+  }
+  .room-body {
+    padding: 14px 16px; /* Reduced padding */
+  }
+  .room-name {
+    font-size: 1.2rem; /* Made smaller */
+  }
+  .room-price strong {
+    font-size: 1.3rem; /* Made smaller */
+  }
+  .room-features li {
+    font-size: 0.7rem; /* Made smaller */
+  }
+
   .exp-card {
     height: 320px;
   }
@@ -2045,10 +2021,11 @@ ul {
   }
 
   .dining-inner {
+    /* Adjusted margin-top for mobile */
     gap: 0;
   }
   .dining-visual {
-    margin-top: 40px;
+    margin-top: 14px;
   }
   .dining-img-main {
     height: 260px;
@@ -2097,12 +2074,25 @@ ul {
   }
 
   .amenity {
-    padding: 22px 14px;
+    padding: 16px 16px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    column-gap: 14px;
+    text-align: left;
   }
   .amenity-icon-wrap {
+    grid-row: 1 / 3;
+    align-self: center;
     width: 42px;
     height: 42px;
-    margin-bottom: 10px;
+    margin: 0;
+  }
+  .amenity h3 {
+    align-self: end;
+    margin-bottom: 3px;
+  }
+  .amenity p {
+    align-self: start;
   }
 
   .section-header {
@@ -2211,6 +2201,7 @@ ul {
   }
 
   .section-header {
+    /* Adjusted section header margin */
     margin-bottom: 24px;
   }
   .section-title {
@@ -2288,15 +2279,28 @@ ul {
     grid-template-columns: 1fr;
   }
   .amenity {
-    padding: 18px 16px;
+    padding: 14px 14px;
+    grid-template-columns: 38px 1fr;
   }
   .amenity-icon-wrap {
     width: 38px;
     height: 38px;
-    margin-bottom: 8px;
   }
 
   .rooms-grid {
     max-width: 100%;
+  }
+  .room-img-wrap {
+    height: 165px;
+  }
+  .room-body {
+    padding: 14px 16px;
+  }
+}
+
+@media (min-width: 1101px) {
+  .btn {
+    padding: 13px 36px;
+    font-size: 0.72rem;
   }
 }

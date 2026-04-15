@@ -6,6 +6,7 @@
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("loader").classList.add("hidden");
+    document.body.classList.remove("loading");
     const navbar = document.getElementById("navbar");
     navbar.style.opacity = "1";
     navbar.style.pointerEvents = "auto";
